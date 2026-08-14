@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es"
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIFORMS DONIS</title>
+    <style>
+        * { margin: o; padding: 0; }  
+
+        body, html {
+            height: 100%;
+            width: 100%;
+        }
+
+        img{
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+            display: block;
+        }
+      </style>
+
+      <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CATALOGO UNIFORMES DONIS</title>
+    <style>
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+            font-family: Arial, sans-serif; 
+        }
+
+        body {
+            background: #f8f6f2; /* Fondo beige como tu foto */
+            padding: 30px 20px;
+        }
+
+        .contenedor{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .producto{
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+            position: relative; 
+        }
+
+        .cabecera {
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+            gap: 10px;
+            background: white;
+        }
+        
+        .numero {
+            background: #2d4a8a; 
+            color: white;
+            padding: 4px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 13px;
+        }
+        
+        .nombre {
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+            color: #222;
+        }
+
+        .producto img{
+            width: 100%;
+            height: 250px; 
+            object-fit: cover;
+            display: block;
+        }
+
+        .precio {
+            background: #1a1a1a; 
+            color: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 13px;
+            position: absolute;
+            top: 60px; 
+            right: 12px;
+        }
+
+        .tallas {
+            font-size: 11px;
+            color: #666;
+            text-transform: uppercase;
+            padding: 10px 15px 15px 15px;
+            letter-spacing: 0.5px;
+        }
+
+        @media (max-width: 900px){ 
+            .contenedor{ grid-template-columns: repeat(2, 1fr); } 
+        }
+        @media (max-width: 600px){ 
+            .contenedor{ grid-template-columns: 1fr; } 
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="img/portada.jpeg" 
+        alt="Portada Uniformes Donis">
+        <section class="catalogo">
+           
+            <header>
+                <section class="catalogo">
+        <h2>Nuestros Uniformes</h2>
+
+        <div class="contenedor">
+
+            <!-- LINEA 1 -->
+            <div class="producto">
+                <div class="cabecera"><span class="numero">01</span><span class="nombre">ALEMANIA</span></div>
+                <img src="img/alemania.jpeg" alt="Alemania">
+                <span class="precio">$10.50</span>
+                <p class="tallas">TALLAS: XS - S - M - L - XL - XXL</p>
+            </div>
+
+            <div class="producto">
+                <div class="cabecera"><span class="numero">02</span><span class="nombre">ARGENTINA</span></div>
+                <img src="img/argentina.jpeg" alt="Argentina">
+                <span class="precio">$10.50</span>
+                <p class="tallas">TALLAS: XS - S - M - L - XL - XXL</p>
+            </div>
+
+            <div class="producto">
+                <div class="cabecera"><span class="numero">03</span><span class="nombre">Atletico de Madrid</span></div>
+                <img src="img/atletico de madrid.jpeg" alt="Atletico de Madrid">
+                <span class="precio">$10.50</span>
+                <p class="tallas">TALLAS: XS - S - M - L - XL - XXL</p>
+            </div>
+
+            <!-- LINEA 2 -->
+            <div class="producto">
+                <div class="cabecera"><span class="numero">04</span><span class="nombre">BÉLGICA</span></div>
+                <img src="img/elgica.jpeg" alt="Belgica">
+                <span class="precio">$10.50</span>
+                <p class="tallas">TALLAS: XS - S - M - L - XL - XXL</p>
+            </div>
+
+            <div class="producto">
+                <div class="cabecera"><span class="numero">05</span><span class="nombre">INGLATERRA</span></div>
+                <img src="img/inglaterrra.jpeg" alt="Inglaterra">
+                <span class="precio">$10.50</span>
+                <p class="tallas">TALLAS: XS - S - M - L - XL - XXL</p>
+            </div>
+
+            <div class="producto">
+                <div class="cabecera"><span class="numero">06</span><span class="nombre">FRANCIA</span></div>
+                <img src="img/japon.jpeg" alt="japon">
+                <span class="precio">$10.50</span>
+                <p class="tallas">TALLAS: XS - S - M - L - XL - XXL</p>
+            </div>
+
+            <!-- LINEA 3 -->
+            <div class="producto">
+                <div class="cabecera"><span class="numero">07</span><span class="nombre">AC Milan</span></div>
+                <img src="img/milan.jpeg" alt="AC Milan">
+                <span class="precio">$10.50</span>
+                <p class="tallas">TALLAS: XS - S - M - L - XL - XXL</p>
+            </div>
+
+            <div class="producto">
+                <div class="cabecera"><span class="numero">08</span><span class="nombre">BARCELONA</span></div>
+                <img src="img/barcelona.jpeg" alt="Barcelona">
+                <span class="precio">$10.50</span>
+                <p class="tallas">TALLAS: XS - S - M - L - XL - XXL</p>
+            </div>
+
+            <div class="producto">
+                <div class="cabecera"><span class="numero">09</span><span class="nombre">Real Madrid</span></div>
+                <img src="img/madrid.jpeg" alt="Real Madrid">
+                <span class="precio">$10.50</span>
+                <p class="tallas">TALLAS: XS - S - M - L - XL - XXL</p>
+            </div>
+
+            <!-- LINEA 4 -->
+            <div class="producto">
+                <div class="cabecera"><span class="numero">10</span><span class="nombre">MANCHESTER CITY</span></div>
+                <img src="img/city.jpeg" alt="Man City">
+                <span class="precio">$10.50</span>
+                <p class="tallas">TALLAS: XS - S - M - L - XL - XXL</p>
+            </div>
+
+            <div class="producto">
+                <div class="cabecera"><span class="numero">11</span><span class="nombre">PSG</span></div>
+                <img src="img/psg.jpeg" alt="PSG">
+                <span class="precio">$10.50</span>
+                <p class="tallas">TALLAS: XS - S - M - L - XL - XXL</p>
+            </div>
+
+            <div class="producto">
+                <div class="cabecera"><span class="numero">12</span><span class="nombre">Napoli</span></div>
+                <img src="img/napoli.jpeg" alt="Napoli">
+                <span class="precio">$10.50</span>
+                <p class="tallas">TALLAS: XS - S - M - L - XL - XXL</p>
+            </div>
+
+        </div>
+    </section>
+
+            </html>
