@@ -13,11 +13,35 @@
             width: 100%;
         }
 
-        img{
-            width: 100%;
-            height: 100vh;
-            object-fit: cover;
-            display: block;
+      .banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.banner-texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+.banner-texto h1 { font-size: 4rem; letter-spacing: 4px; margin: 0; }
+.banner-texto p { font-size: 1.5rem; }
+
+@media (max-width: 768px){ 
+    .banner { height: 60vh; }
+    .banner-texto h1 { font-size: 2rem; }
+    .banner-texto p { font-size: 1rem; }
+}
         }
       </style>
 
@@ -119,9 +143,17 @@
 <body>
 
     <header>
-        <img src="portada.jpeg" 
-        alt="Portada Uniformes Donis">
-        <section class="catalogo">
+      
+<div class="banner">
+            <img src="portada.jpeg" alt="Portada Uniformes Donis">
+            <div class="banner-texto">
+                <h1>DONIS UNIFORMES</h1>
+                <p>Catálogo 2026</p>
+            </div>
+        </div>
+    </header>
+
+    <section class="catalogo">
            
             <header>
                 <section class="catalogo">
