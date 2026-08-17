@@ -219,5 +219,85 @@
 
         </div>
     </section>
+               
+<div id="modalUniforme" class="modal">
+  <div class="modal-content">
+    <span class="cerrar">X</span>
+    <img id="modalImagen" src="" alt="">
+    
+    <div class="modal-footer">
+      <div class="modal-header">
+        <h2 id="modalTitulo"></h2>
+        <p id="modalPrecio"></p>
+      </div>
+      
+      <ul class="specs">
+        <li>✅ Tallas exactas: XS - S - M - L - XL - XXL</li>
+        <li>✅ Nombre y Número personalizados</li>
+        <li>✅ Incluye Medias</li>
+      </ul>
+      
+      <a id="btnWhatsApp" href="#" target="_blank" class="btn-whatsapp">
+        Consultar Por Whatsapp
+      </a>
+    </div>
+  </div>
+</div>
+
+<style>
+
+.modal { display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.85); }
+.modal-content { background: #fff; margin: 5% auto; width: 90%; max-width: 420px; border-radius: 12px; overflow: hidden; position: relative; animation: aparecer 0.3s; }
+@keyframes aparecer { from {transform: scale(0.9);} to {transform: scale(1);} }
+.cerrar { position: absolute; top: 12px; right: 12px; color: #fff; background: rgba(0,0,0,0.7); width: 32px; height: 32px; border-radius: 50%; font-size: 20px; font-weight: bold; text-align: center; line-height: 32px; cursor: pointer; z-index: 10; }
+.cerrar:hover { background: #e63946; }
+#modalImagen { width: 100%; height: 320px; object-fit: contain; background: #f0f0f0; display: block; }
+.modal-footer { padding: 18px; }
+.modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #eee; }
+#modalTitulo { font-size: 22px; font-weight: bold; text-transform: uppercase; }
+#modalPrecio { font-size: 22px; font-weight: bold; color: #e63946; }
+.specs { list-style: none; padding: 0; margin: 12px 0 18px; }
+.specs li { margin: 10px 0; font-size: 15px; color: #333; }
+.btn-whatsapp { display: block; background: #25D366; color: white; text-align: center; padding: 15px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 16px; }
+.btn-whatsapp:hover { background: #20ba5a; }
+.producto { cursor: pointer; } 
+</style>
+
+<script>
+// SCRIPT PARA QUE FUNCIONE EL MODAL + WHATSAPP
+const modal = document.getElementById("modalUniforme");
+const cerrar = document.querySelector(".cerrar");
+const numeroWS = "50379902355"; // TU NUMERO
+
+document.querySelectorAll(".producto").forEach(producto => {
+  producto.addEventListener("click", function() {
+    const titulo = this.querySelector(".nombre").innerText;
+    const precio = this.querySelector(".precio").innerText;
+    const imagen = this.querySelector("img").src;
+    
+    document.getElementById("modalTitulo").innerText = titulo;
+    document.getElementById("modalPrecio").innerText = precio;
+    document.getElementById("modalImagen").src = imagen;
+    
+    // MENSAJE PERSONALIZADO PARA CADA UNIFORME
+    const mensaje = `¡Hola Donis Uniformes! 👋
+
+Me interesa ordenar el uniforme:
+
+◆ Modelo ${titulo}
+◆ Precio: ${precio}
+◆ Incluye personalización de nombre y número.
+
+¿Cómo podemos coordinar el pedido?`;
+    
+    document.getElementById("btnWhatsApp").href = `https://wa.me/${numeroWS}?text=${encodeURIComponent(mensaje)}`;
+    
+    modal.style.display = "block";
+  });
+});
+
+cerrar.onclick = () => modal.style.display = "none";
+window.onclick = (event) => { if(event.target == modal) modal.style.display = "none"; }
+</script>
 
             </html>
